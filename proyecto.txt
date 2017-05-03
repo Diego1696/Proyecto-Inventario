@@ -1,0 +1,53 @@
+buscar plantilla responsive
+recuperar fichero texto
+analizar estructura modelo relacional
+crear proyecto
+
+fichamaterial
+idreferencia		autonumerico
+aparato			varchar		//mattipo
+categoria*		desplegable	//	
+proveedor*		desplegable 	//
+marca*			desplegable 	//matmarca
+modelo			varchar	 	//matdesc
+nserie			varchar 	//matnumse
+fechaentrada		fecha 		//establecer fecha estandar
+cantidad		varchar 	//matcant
+autorizadapor*		desplegable 	//referencia usuarios
+garantia		varchar 	//
+ubicacion*		desplegable 	//matlocal
+ninterno		varchar 	//matnumco
+fechabaja		fecha 		//a observaciones
+observaciones		longtext 	//datos fuera bdd
+
+
+
+incidencias
+idincidencia		autonumerico
+fechaincidencia		fecha
+incidencia		longtext
+fechasolucion		fecha
+solucion		longtext
+
+
+
+revisiones
+idrevision		autonumerico
+fecharevision		fecha
+realizadapor*		desplegable
+observaciones		longtext
+
+
+
+Para la transformación del fichero antiguo
+MatCodig:  X
+MatNumSe:  Numero Serie
+MatNumMe:  X
+MatNumCo:  X
+MatCant:   X
+MatTipo:   Aparato
+MatDescr:  Modelo
+MatMarca:  Marca
+MatLocal:  Ubicación
+$Revisions: **** Revisiones 
+$UpdatedBy:
