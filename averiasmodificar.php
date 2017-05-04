@@ -9,7 +9,7 @@ $solucion=$_POST['solucion'];
 // conectamos con la base de datos
 include("Conexion.php");
 // creamos consulta
- $sql="UPDATE incidencias SET idincidencia='$idincidencia', fechaincidencia='$fechaincidencia', incidencia='$incidencia', fechasolucion='$fechasolucion', solucion='$solucion'";
+$sql="UPDATE incidencias SET fechaincidencia='$fechaincidencia', incidencia='$incidencia', fechasolucion='$fechasolucion', solucion='$solucion' WHERE idincidencia=$idincidencia ";
 // ejecutamos la consulta
 mysqli_query($conexion,$sql) or die("Error en la consulta de insercion $sql");
 // cerramos la conexion
