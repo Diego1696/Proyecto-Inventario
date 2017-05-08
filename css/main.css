@@ -56,6 +56,8 @@ html, body{
 	box-sizing: border-box;
 }
 .img-responsive{
+	width: 100%;
+	height: auto;
 }
 .divider-menu-h{
 	height: 0 !important;
@@ -66,10 +68,10 @@ html, body{
 .cover{
 	background-size: 100% 100%;
 	background-attachment: fixed;
-	background-repeat: no-repeat; 100%
+	background-repeat: no-repeat;
 	background-position: center center;
 	background-color: #fff;
-	background-image: url(../assets/img/fontLogin.png);
+	background-image: url(../assets/img/fontLogin.jpg);
 }
 .mdl-list__item-avatar{
 	line-height: 40px;
@@ -523,7 +525,7 @@ html, body{
 .tile-text span,
 .tile-icon{
 	position: absolute;
-	color: #575757;
+	color: rgba(0,0,0,.5);
 	transition: all .3s ease-in-out;
 	-moz-user-select: none;
 	-webkit-user-select: none;

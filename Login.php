@@ -15,14 +15,22 @@ if($total==0){
 		if($linea['clave']==$cla){
 			$_SESSION['dniusuario']=$linea['dni'];
 			$_SESSION['nombreusuario']=$linea['nombre'];
-			if($linea['dni']=='111111111')
+			if($linea['dni']=='111111111'){
+				$_SESSION['admin']="admin";
 				header("location:home.php");
-			if($linea['dni']=='777777777')
+			}
+			if($linea['dni']=='777777777'){
+				$_SESSION['encargado']="encargado";
 				header("location:encargado.php");
-			if($linea['dni']=='888888888')
+			}
+			if($linea['dni']=='888888888'){
+				$_SESSION['profesor']="profesor";
 				header("location:profesor.php");
-			if($linea['dni']=='999999999')
+			}
+			if($linea['dni']=='999999999'){
+				$_SESSION['sat']="sat";
 				header("location:sat.php");
+			}
 		}else{
 			echo "<H2>ClAVE INCORRECTA</H2>Pulse <a href='index.php'>aqui</a> para continuar.";
 		}

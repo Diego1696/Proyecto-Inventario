@@ -4,38 +4,60 @@ analizar estructura modelo relacional
 crear proyecto
 
 fichamaterial
-idreferencia		autonumerico
-aparato			varchar		//mattipo
-categoria*		desplegable	//	
-proveedor*		desplegable 	//
-marca*			desplegable 	//matmarca
+idreferencia	autonumerico
+aparato			varchar		//mattipo	
+proveedor*		desplegable //
+marca*			desplegable	//matmarca
 modelo			varchar	 	//matdesc
 nserie			varchar 	//matnumse
-fechaentrada		fecha 		//establecer fecha estandar
+fechaentrada	fecha 		//establecer fecha estandar
 cantidad		varchar 	//matcant
-autorizadapor*		desplegable 	//referencia usuarios
+autorizadapor*	desplegabl 	//referencia usuarios
 garantia		varchar 	//
-ubicacion*		desplegable 	//matlocal
+ubicacion*		desplegable	//matlocal
 ninterno		varchar 	//matnumco
 fechabaja		fecha 		//a observaciones
-observaciones		longtext 	//datos fuera bdd
+estado (activo, almacenado, reparacion)
+observaciones	longtext	//datos fuera bdd
+
+impresoras
+idreferencia
+tipo (tinta, laser)
+consumible
+
+monitores
+idreferencia
+tamaño
+tipo
+
+ordenadores
+idreferencia
+placa
+procesador
+ram
+discoduro
+tarjetas
+ip
+domino
+software
+
 
 
 
 incidencias
-idincidencia		autonumerico
-fechaincidencia		fecha
+idincidencia	autonumerico
+fechaincidencia	fecha
 incidencia		longtext
-fechasolucion		fecha
+fechasolucion	fecha
 solucion		longtext
 
 
 
 revisiones
 idrevision		autonumerico
-fecharevision		fecha
-realizadapor*		desplegable
-observaciones		longtext
+fecharevision	fecha
+realizadapor*	desplegable
+observaciones	longtext
 
 
 
