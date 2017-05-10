@@ -16,12 +16,20 @@ $ninterno=$_POST['ninterno'];
 $fechabaja=$_POST['fechabaja'];
 $observaciones=$_POST['observaciones'];
 
+$tamano=$_POST['tamano'];
+$tipo=$_POST['tipo'];
+
+
 // conectamos con la base de datos
 include("Conexion.php");
 // creamos consulta
 $sql="INSERT INTO fichamaterial(idreferencia, aparato, categoria, proveedor, marca, modelo, nserie, cantidad, fechaentrada, autorizadapor, garantia, ubicacion, ninterno, fechabaja, observaciones) VALUES('$idreferencia','$aparato','$categoria','$proveedor','$marca','$modelo','$nserie','$cantidad','$fechaentrada','$autorizadapor','$garantia','$ubicacion','$ninterno','$fechabaja','$observaciones')";
+
 // ejecutamos la consulta
 mysqli_query($conexion,$sql) or die("Error en la consulta de insercion $sql");
+$id = mysqli_insert_id($conexion);
+$sql1="INSERT INTO monitores(idreferencia, tamano, tipo) VALUES('$id','$tamano','$tipo')";
+mysqli_query($conexion,$sql1) or die("Error en la consulta de insercion $sql");
 // cerramos la conexion
 mysqli_close($conexion);
 // redirigimos a la pagina inicial
